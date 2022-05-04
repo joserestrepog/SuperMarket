@@ -1,5 +1,5 @@
 <?php
-
+    include 'conexion.php';
     public function prueba(){
         $schema = '"ScSuperMarket"';
         $query = "SELECT id_usuario, nombre, rol, fk_id_sucursal, username, contrasena FROM ".$schema.".usuario;";
