@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/colaborador.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+
+}
+
+.divisora .fondo_colaborador {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 55px);
+    outline-color: #fff;
+    outline-style: auto;
+    
+}
+
+.divisora {
+    width: 1200px;
+    height: 800px;
+    background: #4DD0E1;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 30px;
+}
+
+.divisora h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+
+}
+
+.divisora label {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    font-size: 25px;
+    display: block;
+    color: #fff;
+    
+}
+
+.divisora .texto {
+    font-size: 20px;
+    top: 30%;
+    left: 27%;
+    position: absolute;
+    text-align: center;    
+}
+
+.divisora .texto th {
+    padding: auto;
+    
+}
