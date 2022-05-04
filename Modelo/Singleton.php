@@ -1,9 +1,6 @@
 <?php
 
-    
-echo "prueba";
 
-namespace SuperMarket\Modelo;
 
 class Singleton
 {
