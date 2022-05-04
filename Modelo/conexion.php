@@ -7,6 +7,7 @@
             if ($conn){
                 echo "Conexión exitosa"."<br>"."<br>";
             }
+            
         }
     
         public static function getInstance()
@@ -15,7 +16,7 @@
             if (null === $instance) {
                 $instance = new static();
             } else {
-                echo 'El objeto ya existe, no puedes volver a crearlo <br />';
+                echo 'Ya hay una conexión a la base de datos <br />';
             }
     
             return $instance;
