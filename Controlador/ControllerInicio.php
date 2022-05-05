@@ -1,5 +1,5 @@
 <?php
-    
+        #Capturar datos del formulario Iniciar Sesión.
         $usuario=$_POST['id_usuario']; 
         $contrasena=$_POST['contrasena']; 
         include '../Modelo/Servicios.php';
@@ -14,7 +14,7 @@
             include '../Vista/Modulo_colaborador/colaborador.html';
         }
         else if($result=="NOROL"){
-            #mostrar dentro del index.html un mensaje de erroo
+            #mostrar dentro del index.html un mensaje de error
             #Usuario o contraseña invalidos
         }
-?>
+?>  

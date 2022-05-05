@@ -5,5 +5,4 @@
          echo "Conexión exitosa"."<br>"."<br>";
      }
     $schema = '"ScSuperMarket"';
-
 ?>
