@@ -3,7 +3,7 @@
    
         function iniciarSesion($id_usuario, $contrasena){
             $rol="";
-            include '../conexion.php';
+            include 'conexion.php';
             $query = "SELECT id_usuario, rol, contrasena FROM $schema.usuario WHERE id_usuario=$id_usuario AND contrasena='$contrasena'";
             $sql = pg_query($conn,$query);
             
