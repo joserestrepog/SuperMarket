@@ -2,7 +2,7 @@
    
     $conn = pg_connect("host=192.168.1.150 port=5432 dbname=SuperMarket user=postgres password=postgres") or die('No se ha podido conectar: ' . pg_last_error());
     if ($conn){
-         echo "Conexión exitosa"."<br>"."<br>";
+        $schema = '"ScSuperMarket"';
      }
-    $schema = '"ScSuperMarket"';
+    
 ?>
