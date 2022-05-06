@@ -21,7 +21,6 @@
                     $rol="Administrador";
                 }
             }
-            pg_close($conn);
             
         return $rol;
         }
@@ -38,7 +37,7 @@
             else{
                 $res="ERROR";
             }
-            pg_close($conn);
+            
             return $res;
         }
 
@@ -54,7 +53,7 @@
             else{
                 $res="ERROR";
             }
-            pg_close($conn);
+            
             return $res;
         }
 
@@ -72,7 +71,7 @@
                 $obj->fecha_ingreso."<br>";
                 $obj->fecha_vencimiento."<br>"."<br>";
             }
-            pg_close($conn);
+            
             return $obj;
         }
 
@@ -88,7 +87,7 @@
             else{
                 $res="ERROR";
             }
-            pg_close($conn);
+            
             return $res;
         }
 
@@ -104,7 +103,7 @@
             else{
                 $res="ERROR";
             }
-            pg_close($conn);
+            
             return $res;
         }
 
@@ -120,7 +119,7 @@
             else{
                 $res="ERROR";
             }
-            pg_close($conn);
+           
             return $res;
         }
 
@@ -139,7 +138,7 @@
             else{
                 $res="OK";
             }
-            pg_close($conn);
+            
             return $res;
         }
 
@@ -155,7 +154,7 @@
             else{
                 $res="ERROR";
             }
-            pg_close($conn);
+            
             return $res;
         }
 
@@ -171,7 +170,7 @@
             else{
                 $res="ERROR";
             }
-            pg_close($conn);
+           
             return $res;
         }
 
@@ -190,7 +189,7 @@
             else{
                 $res="OK";
             }
-            pg_close($conn);
+            
             return $res;
         }
 ?>
