@@ -21,7 +21,7 @@
             <ul class="itemsForms">
                 <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigoBuscar"  placeholder="Buscar por Código..." />
+                    <input type="number" name="codigoBuscar" required="Campo requerido" placeholder="Buscar por Código..." />
                   </li>
                   <li>
                     <input class="btn btn-submit" type="submit" value="Buscar" /> 
@@ -29,16 +29,16 @@
                   </li>
                   <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigo"  placeholder="Código..." readonly="readonly"/>
+                    <input type="number" name="codigo" placeholder="Código..." disabled readonly="readonly"/>
                   </li>
               <li>
                 <p class="">
                   <label for="first_name">Nombre</label>
-                  <input type="text" name="name" placeholder="Nombre..." readonly="readonly" />
+                  <input type="text" name="name" placeholder="Nombre..." disabled readonly="readonly" />
                 </p>
                 <p class="">
                   <label for="first_name">Dirección</label>
-                  <input type="text" name="descripción" placeholder="Dirección..." readonly="readonly" />
+                  <input type="text" name="descripción" placeholder="Dirección..." disabled readonly="readonly" />
                 </p>
               </li>
             </ul>

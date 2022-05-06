@@ -17,33 +17,36 @@
           <h3>Módulo Gestión Colaborador - Insertar</h3>
         </div>
         <div class="row body">
-          <form action="#">
+          <form action="../../../../Controlador/ControladorUsuario/ControllerInsertarUsuario.php" method="post">
             <ul class="itemsForms">
                 <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigo"  placeholder="Código..." />
+                    <input type="number" name="codigo" required="Campo requerido" placeholder="Código..." />
                   </li>
               <li>
                 <p class="">
                   <label for="first_name">Nombre</label>
-                  <input type="text" name="name" placeholder="Nombre..." />
+                  <input type="text" name="name" required="Campo requerido" placeholder="Nombre..." />
                 </p>      
               <li>
                 <p>
                     <label for="first_name">Contraseña</label>
-                    <input type="text" name="contraseña" placeholder="Contraseña..." />
+                    <input type="text" name="contraseña" required="Campo requerido" placeholder="Contraseña..." />
                 </p>
               </li>
               <li>
                 <p>
                     <label for="first_name">Rol</label>
-                    <input type="text" name="rol" placeholder="Rol..." />
+                    <select name="rol" required="Campo Obligatorio" placeholder="Rol...">
+                      <option>Administrador</option>                     
+                      <option>Colaborador</option>                     
+                    </select>
                 </p>
               </li>
               <li>
                 <p>
                     <label for="first_name">Sucursal a cargo</label>
-                    <input type="text" name="sucursal" placeholder="Sucursal a cargo..." />
+                    <input type="number" name="sucursal" required="Campo requerido" placeholder="Sucursal a cargo..." />
                 </p>
               </li>
               <li>

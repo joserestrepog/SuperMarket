@@ -7,14 +7,17 @@
         $result=iniciarSesion($usuario, $contrasena);
 
         if($result=="Administrador"){
-            include '../Vista/Modulo_administrador/html/ModuloAdministrador.html';
+            header ("refresh:0;url=../Vista/Modulo_administrador/html/ModuloAdministrador.html");
         }
         else if($result=="Colaborador"){
-            #configurar ruta
-            include '../Vista/Modulo_colaborador/colaborador.html';
+            header ("refresh:0;url=../Vista/Modulo_colaborador/colaborador.html");
         }
         else if($result=="NOROL"){
-            #mostrar dentro del index.html un mensaje de error
-            #Usuario o contraseña invalidos
+            echo <<<JAVASCRIPT
+            <script type="text/javascript">
+                alert("Datos incorrectos.");
+            </script>
+            JAVASCRIPT;
+            header ("refresh:0;url=../Vista/Login/index.html");            
         }
 ?>  

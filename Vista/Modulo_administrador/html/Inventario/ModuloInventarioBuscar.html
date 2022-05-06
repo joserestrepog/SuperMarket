@@ -21,7 +21,7 @@
             <ul class="itemsForms">
                 <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigoBuscar"  placeholder="Buscar por Código..." />
+                    <input type="number" name="codigoBuscar" required="Campo requerido" placeholder="Buscar por Código..." />
                 </li>
                 <li>
                   <input class="btn btn-submit" type="submit" value="Buscar" /> 
@@ -29,42 +29,36 @@
                 </li>
                 <li>
                   <label for="comments">Código</label>
-                  <input cols="46" rows="3" name="codigo"  placeholder="Código..." readonly="readonly"/>
+                  <input cols="46" rows="3" name="codigo" disabled placeholder="Código..." readonly="readonly"/>
                 </li>
                 <li>
                   <p class="">
                     <label for="first_name">Descripción</label>
-                    <input type="text" name="descripción" placeholder="Descripción..." readonly="readonly" />
+                    <input type="text" name="descripcion" disabled placeholder="Descripción..." readonly="readonly" />
                   </p>
                 </li> 
                 <li>
                   <p>
                     <label for="first_name">Precio</label>
-                    <input type="text" name="precio" placeholder="Precio..." readonly="readonly" />
+                    <input type="text" name="precio" disabled placeholder="Precio..." readonly="readonly" />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Cantidad Stock</label>
-                    <input type="text" name="cantidad" placeholder="Cantidad..." readonly="readonly" />
+                    <input type="text" name="cantidad" disabled placeholder="Cantidad..." readonly="readonly" />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Fecha Ingreso</label>
-                    <input type="text" name="fechaIngreso" placeholder="Fecha Ingreso..." readonly="readonly" />
+                    <input type="text" name="fechaIngreso" disabled placeholder="Fecha Ingreso..." readonly="readonly" />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Fecha Vencimiento</label>
-                    <input type="text" name="fechaVencimiento" placeholder="Fecha Vencimiento..." readonly="readonly" />
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <label for="first_name">Sucursal</label>
-                    <input type="text" name="sucursal" placeholder="Sucursal..." readonly="readonly" />
+                    <input type="text" name="fechaVencimiento" disabled placeholder="Fecha Vencimiento..." readonly="readonly" />
                   </p>
                 </li>
             </ul>

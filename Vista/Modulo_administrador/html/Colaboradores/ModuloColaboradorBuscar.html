@@ -19,39 +19,40 @@
         <div class="row body">
           <form action="#">
             <ul class="itemsForms">
-                <li>
+              <li>
+                <label for="comments">Código</label>
+                <input type="number" name="codigoBuscar" required="Campo requerido" placeholder="Buscar por Código..." />
+            </li>
+            <li>
+              <input class="btn btn-submit" type="submit" value="Buscar" /> 
+              <a href="ModuloColaborador.html" class="btn btn-submit"> Cancelar/Regresar </a>
+            </li>
+            <li>
+                  <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigoBuscar"  placeholder="Buscar por Código..." />
-                  </li>
-                  <li>
-                    <input class="btn btn-submit" type="submit" value="Buscar" /> 
-                    <a href="ModuloColaborador.html" class="btn btn-submit"> Cancelar/Regresar </a>
-                  </li>
-                  <li>
-                    <label for="comments">Codigo</label>
-                    <input cols="46" rows="3" name="codigo"  placeholder="Código..." readonly="readonly"/>
+                    <input type="number" name="codigo" disabled placeholder="Código..." readonly="readonly"/>
                   </li>
               <li>
                 <p class="">
                   <label for="first_name">Nombre</label>
-                  <input type="text" name="name" placeholder="Nombre..." readonly="readonly" />
+                  <input type="text" name="name" disabled placeholder="Nombre..." readonly="readonly" />
                 </p>      
               <li>
                 <p>
                     <label for="first_name">Contraseña</label>
-                    <input type="text" name="contraseña" placeholder="Contraseña..." readonly="readonly" />
+                    <input type="text" name="contraseña" disabled placeholder="Contraseña..." readonly="readonly" />
                 </p>
               </li>
               <li>
                 <p>
                     <label for="first_name">Rol</label>
-                    <input type="text" name="rol" placeholder="Rol..." />
+                    <input type="text" name="rol" disabled placeholder="Rol..." />
                 </p>
               </li>
               <li>
                 <p>
                     <label for="first_name">Sucursal a cargo</label>
-                    <input type="text" name="sucursal" placeholder="Sucursal a cargo..." readonly="readonly" />
+                    <input type="number" name="sucursal" disabled placeholder="Sucursal a cargo..." readonly="readonly" />
                 </p>
               </li>
             </ul>

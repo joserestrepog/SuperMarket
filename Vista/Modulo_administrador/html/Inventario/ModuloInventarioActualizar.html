@@ -17,53 +17,39 @@
           <h3>Módulo Gestión Inventario - Actualizar</h3>
         </div>
         <div class="row body">
-          <form action="#">
+          <form action="../../../../Controlador/ControladorProducto/ControllerUpdateProducto.php" method="post">
             <ul class="itemsForms">
                 <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigoBuscar"  placeholder="Buscar por Código..." />
+                    <input type="number" name="codigoBuscar" required="Campo requerido" placeholder="Buscar por Código..." />
                 </li>
                 <li>
-                  <input class="btn btn-submit" type="submit" value="Buscar" /> 
-                </li>
-                <li>
-                  <label for="comments">Código</label>
-                  <input cols="46" rows="3" name="codigo"  placeholder="Código..." />
-                </li>
-                <li>
-                  <p class="">
                     <label for="first_name">Descripción</label>
-                    <input type="text" name="descripción" placeholder="Descripción..." />
+                    <input type="text" name="descripcion" required="Campo requerido" placeholder="Descripción..." />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Precio</label>
-                    <input type="text" name="precio" placeholder="Precio..." />
+                    <input type="number" name="precio" required="Campo requerido" placeholder="Precio..." />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Cantidad Stock</label>
-                    <input type="text" name="cantidad" placeholder="Cantidad..." />
+                    <input type="number" name="cantidad" required="Campo requerido" placeholder="Cantidad..." />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Fecha Ingreso</label>
-                    <input type="text" name="fechaIngreso" placeholder="Fecha Ingreso..." />
+                    <input type="date" name="fechaIngreso" required="Campo requerido" placeholder="Fecha Ingreso..." />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Fecha Vencimiento</label>
-                    <input type="text" name="fechaVencimiento" placeholder="Fecha Vencimiento..." />
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <label for="first_name">Sucursal</label>
-                    <input type="text" name="sucursal" placeholder="Sucursal..." />
+                    <input type="date" name="fechaVencimiento" required="Campo requerido" placeholder="Fecha Vencimiento..." />
                   </p>
                 </li>
                 <li>

@@ -17,27 +17,20 @@
           <h3>Módulo Gestión Sucursal - Actualizar</h3>
         </div>
         <div class="row body">
-          <form action="#">
+          <form action="../../../../Controlador/ControladorSucursal/ControllerUpdateSucursal.php" method="post">
             <ul class="itemsForms">
-                <li>
-                    <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigoBuscar"  placeholder="Buscar por Código..." />
-                  </li>
-                  <li>
-                    <input class="btn btn-submit" type="submit" value="Buscar" /> 
-                  </li>
                   <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigo"  placeholder="Código..." />
+                    <input type="number" name="codigo" required="Campo requerido" placeholder="Código..." />
                   </li>
               <li>
                 <p class="">
                   <label for="first_name">Nombre</label>
-                  <input type="text" name="name" placeholder="Nombre..." />
+                  <input type="text" name="name" required="Campo requerido" placeholder="Nombre..." />
                 </p>
                 <p class="">
                   <label for="first_name">Dirección</label>
-                  <input type="text" name="descripción" placeholder="Descripción..." />
+                  <input type="text" name="direccion" required="Campo requerido" placeholder="Dirección..." />
                 </p>
               </li>
               <li>

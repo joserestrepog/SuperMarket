@@ -17,11 +17,11 @@
           <h3>Módulo Gestión Inventario - Eliminar</h3>
         </div>
         <div class="row body">
-          <form action="#">
+          <form action="../../../../Controlador/ControladorProducto/ControllerDeleteProducto.php" method="post">
             <ul class="itemsForms">
                 <li>
                     <label for="comments">Código</label>
-                    <input cols="46" rows="3" name="codigoBuscar"  placeholder="Eliminar por Código..." />
+                    <input type="number" name="codigoBuscar" required="Campo requerido" placeholder="Eliminar por Código..." />
                   </li>
                   <li>
                     <input class="btn btn-submit" type="submit" value="Eliminar" /> 
