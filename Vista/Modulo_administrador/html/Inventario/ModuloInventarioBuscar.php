@@ -9,7 +9,7 @@
 </head>
 
 <link href="../../css/cssEstilosForms.css" rel="stylesheet" type="text/css">
-
+<?php include '/../../../../Controlador/ControladorProducto/ControllerBuscarProducto.php'; ?>
 <body>
     <div class="container">
         <div class="row header">
@@ -19,6 +19,7 @@
         <div class="row body">
           <form action="../../../../Controlador/ControladorProducto/ControllerBuscarProducto.php" method="post">
             <ul class="itemsForms">
+            <?php include '../../../../Controlador/ControladorProducto/ControllerBuscarProducto.php'; ?>
                 <li>
                     <label for="comments">Código</label>
                     <input type="number" name="codigoBuscar" required="Campo requerido" placeholder="Buscar por Código..." />
@@ -27,38 +28,35 @@
                   <input class="btn btn-submit" type="submit" value="Buscar" /> 
                   <a href="ModuloInventario.html" class="btn btn-submit"> Cancelar/Regresar </a>
                 </li>
-                <li>
-                  <label for="comments">Código</label>
-                  <input cols="46" rows="3" name="codigo" disabled placeholder="Código..." readonly="readonly"/>
-                </li>
+            
                 <li>
                   <p class="">
                     <label for="first_name">Descripción</label>
-                    <input type="text" name="descripcion" disabled placeholder="Descripción..." readonly="readonly" />
+                    <input type="text" name="descripcion" disabled value="<?php echo $result[0];?>" placeholder="Descripción..." readonly="readonly" />
                   </p>
                 </li> 
                 <li>
                   <p>
                     <label for="first_name">Precio</label>
-                    <input type="text" name="precio" disabled placeholder="Precio..." readonly="readonly" />
+                    <input type="text" name="precio" disabled value="<?php echo $result[1];?>" placeholder="Precio..." readonly="readonly" />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Cantidad Stock</label>
-                    <input type="text" name="cantidad" disabled placeholder="Cantidad..." readonly="readonly" />
+                    <input type="text" name="cantidad" disabled value="<?php echo $result[2];?>" placeholder="Cantidad..." readonly="readonly" />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Fecha Ingreso</label>
-                    <input type="text" name="fechaIngreso" disabled placeholder="Fecha Ingreso..." readonly="readonly" />
+                    <input type="text" name="fechaIngreso" disabled value="<?php echo $result[3];?>" placeholder="Fecha Ingreso..." readonly="readonly" />
                   </p>
                 </li>
                 <li>
                   <p>
                     <label for="first_name">Fecha Vencimiento</label>
-                    <input type="text" name="fechaVencimiento" disabled placeholder="Fecha Vencimiento..." readonly="readonly" />
+                    <input type="text" name="fechaVencimiento" disabled value="<?php echo $result[4];?>" placeholder="Fecha Vencimiento..." readonly="readonly" />
                   </p>
                 </li>
             </ul>
