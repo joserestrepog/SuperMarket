@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include '../../Controlador/ControladorProducto/ControllerBuscarProducto.php'; ?>
     <title>Módulo Colaborador</title>
 </head>
-
 <link href="../../css/cssEstilosForms.css" rel="stylesheet" type="text/css">
-
 <body>
+  
     <div class="container">
         <div class="row header">
           <h1>BUSCAR &nbsp;</h1>
@@ -19,6 +19,7 @@
         <div class="row body">
           <form action="../../../../Controlador/ControladorUsuario/ControllerBuscarUsuario.php" method="post">
             <ul class="itemsForms">
+                
               <li>
                 <label for="comments">Código</label>
                 <input type="number" name="codigoBuscar" required="Campo requerido" placeholder="Buscar por Código..." />
@@ -32,7 +33,7 @@
               <li>
                 <p class="">
                   <label for="first_name">Nombre</label>
-                  <input type="text" name="name" disabled placeholder="Nombre..." readonly="readonly" />
+                  <input type="text" name="name" disabled placeholder="Nombre..." readonly="readonly" value="<?php $busqueda_nombre?>"  />
                 </p>      
               <li>
                 <p>
