@@ -1,5 +1,5 @@
 <?php
-    $codigo=$_POST['codigoBuscar']; 
+     $codigo=$_POST['codigoBuscar']; 
      $descripcion=$_POST['descripcion']; 
      $precio=$_POST['precio']; 
      $cantidad=$_POST['cantidad']; 

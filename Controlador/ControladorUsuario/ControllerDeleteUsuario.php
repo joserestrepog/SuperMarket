@@ -14,7 +14,7 @@
      else if($result=="ERROR"){
         echo <<<JAVASCRIPT
         <script type="text/javascript">
-            alert("Error al eliminar el colaborador.");
+            alert("Usuario no existe.");
         </script>
         JAVASCRIPT;
         header ("refresh:0;url=../../Vista\Modulo_administrador\html\Colaboradores\ModuloColaboradorEliminar.html"); 

@@ -10,7 +10,7 @@
      if($result=="OK"){
         echo <<<JAVASCRIPT
         <script type="text/javascript">
-            alert("Se insertó el colaborador.");
+            alert("Se insertó usuario.");
         </script>
         JAVASCRIPT;
         header ("refresh:0;url=../../Vista\Modulo_administrador\html\Colaboradores\ModuloColaboradorInsertar.html");
@@ -18,7 +18,7 @@
      else if($result=="ERROR"){
         echo <<<JAVASCRIPT
         <script type="text/javascript">
-            alert("Error al insertar el colaborador.");
+            alert("Error al insertar usuario.");
         </script>
         JAVASCRIPT;
         header ("refresh:0;url=../../Vista\Modulo_administrador\html\Colaboradores\ModuloColaboradorInsertar.html");

@@ -14,7 +14,7 @@
      else if($result=="ERROR"){
         echo <<<JAVASCRIPT
         <script type="text/javascript">
-            alert("Error al eliminar la sucursal.");
+            alert("Error al eliminar la sucursal, verifique los datos.");
         </script>
         JAVASCRIPT;
         header ("refresh:0;url=../../Vista/Modulo_administrador/html/Sucursales/ModuloSucursalesEliminar.html");

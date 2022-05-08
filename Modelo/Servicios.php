@@ -58,23 +58,22 @@
         
         function buscarProducto($codigo){
             include 'conexion.php';
-            $res=[];
-            $query = "SELECT id_producto FROM $schema.producto WHERE id_producto=$codigo";
+            $res=[];           
+            $query = "SELECT descripcion, precio, cantidad, fecha_ingreso, fecha_vencimiento FROM $schema.producto WHERE id_producto=$codigo";
             $sql = pg_query($conn,$query);
-            if(pg_num_rows($sql) == 0){
-                $res="ERROR";
-            }else if(pg_num_rows($sql) == 1){
-                $query2 = "SELECT descripcion, precio, cantidad, fecha_ingreso, fecha_vencimiento FROM $schema.producto WHERE id_producto=$codigo";
-                while($Row=pg_fetch_assoc($sql)){
-                    $res[0]=$Row['descripcion'];
-                    $res[1]=$Row['precio'];
-                    $res[2]=$Row['cantidad'];
-                    $res[3]=$Row['fecha_ingreso'];
-                    $res[4]=$Row['fecha_vencimiento'];
-                }
+            while($Row=pg_fetch_assoc($sql)){
+                $res[0]=$Row['descripcion'];
+                $res[1]=$Row['precio'];
+                $res[2]=$Row['cantidad'];
+                $res[3]=$Row['fecha_ingreso'];
+                $res[4]=$Row['fecha_vencimiento'];
             }
-            return $res;
+            if($res==NULL){
+                $res="ERROR";
+            }          
+            return $res; 
         }
+        
         
         function eliminarProducto($codigo){
             include 'conexion.php';
@@ -97,12 +96,14 @@
             include 'conexion.php';
             $res="";
             $query = "SELECT id_usuario FROM $schema.usuario WHERE id_usuario=$id_usuario";
+            $query1 = "SELECT id_sucursal FROM $schema.sucursal WHERE id_sucursal=$sucursal";
             $sql = pg_query($conn,$query);
-            if(pg_num_rows($sql) == 0){                
+            $sql1 = pg_query($conn,$query1);
+            if(pg_num_rows($sql) == 0 && pg_num_rows($sql1)==1){                
                 $query2 = "INSERT INTO $schema.usuario(id_usuario, nombre, contrasena, rol, fk_id_sucursal) values ($id_usuario, '$nombre', '$contrasena', '$rol', '$sucursal')";
                 $sql = pg_query($conn,$query2);
                 $res="OK";
-            }else if(pg_num_rows($sql) == 1){
+            }else{
                 $res="ERROR";                
             }
             return $res;
@@ -126,24 +127,19 @@
         function buscarUsuario($codigo){
             include 'conexion.php';
             $res=[];
-            $query = "SELECT id_usuario FROM $schema.usuario WHERE id_usuario=$codigo";
+            $query = "SELECT nombre, contrasena, rol, fk_id_sucursal FROM $schema.usuario WHERE id_usuario=$codigo";
             $sql = pg_query($conn,$query);
-            if(pg_num_rows($sql) == 0){
+            while($Row=pg_fetch_assoc($sql)){
+                $res[0]=$Row['nombre'];
+                $res[1]=$Row['contrasena'];
+                $res[2]=$Row['rol'];
+                $res[3]=$Row['fk_id_sucursal'];
+            }if($res==NULL){
                 $res="ERROR";
-            }else if(pg_num_rows($sql) == 1){
-                $query2 = "SELECT nombre, contrasena, rol, fk_id_sucursal FROM $schema.usuario WHERE usuario.fk_id_sucursal=sucursal.id_sucursal AND id_usuario=$codigo";
-                $sql = pg_query($conn,$query2);
-                while($Row=pg_fetch_assoc($sql)){
-                    $res[0]=$Row['nombre'];
-                    $res[1]=$Row['contrasena'];
-                    $res[2]=$Row['rol'];
-                    $res[3]=$Row['fk_id_sucursal'];
-                }
-                $res="OK";
-            }            
+            }          
             return $res;
         }
-
+        
         function eliminarUsuario($id_usuario){
             include 'conexion.php';
             $res="";
@@ -162,6 +158,7 @@
         function insertarSucursal($id_sucursal, $nombre, $direccion){
             include 'conexion.php';
             $res="";
+           
             $query = "SELECT id_sucursal FROM $schema.sucursal WHERE id_sucursal=$id_sucursal";
             $sql = pg_query($conn,$query);
             if(pg_num_rows($sql) == 0){
@@ -192,34 +189,32 @@
         function buscarSucursal($codigo){
             include 'conexion.php';
             $res=[];
-            $query = "SELECT id_sucursal FROM $schema.sucursal WHERE id_sucursal=$codigo";
+            $query = "SELECT nombre, direccion FROM $schema.sucursal WHERE id_sucursal=$codigo";
             $sql = pg_query($conn,$query);
-            if(pg_num_rows($sql) == 0){
+            while($Row=pg_fetch_assoc($sql)){
+                $res[0]=$Row['nombre'];
+                $res[1]=$Row['direccion'];
+            }if($res==NULL){
                 $res="ERROR";
-            }else if(pg_num_rows($sql) == 1){
-                $query2 = "SELECT nombre, direccion FROM $schema.sucursal WHERE id_sucursal=$codigo";
-                $sql = pg_query($conn,$query2);
-                while($Row=pg_fetch_assoc($sql)){
-                    $res[0]=$Row['nombre'];
-                    $res[1]=$Row['direccion'];
-                }
-                $res="OK";
-            }            
-            return $res;
+            }          
+            return $res; 
         }
 
         function eliminarSucursal($id_sucursal){
             include 'conexion.php';
             $res="";
             $query = "SELECT id_sucursal FROM $schema.sucursal WHERE id_sucursal=$id_sucursal";
+            $query1 = "SELECT fk_id_sucursal FROM $schema.usuario WHERE fk_id_sucursal=$id_sucursal";
             $sql = pg_query($conn,$query);
-            if(pg_num_rows($sql) == 0){
-                $res="ERROR";
-            }else if(pg_num_rows($sql) == 1){
+            $sql1 = pg_query($conn,$query1);
+            if(pg_num_rows($sql) == 1 && pg_num_rows($sql1)==0){
                 $query2 = "DELETE FROM $schema.sucursal WHERE id_sucursal=$id_sucursal";
                 $sql = pg_query($conn,$query2);
                 $res="OK";
-            }            
+            } 
+            else{
+                $res="ERROR";
+            }        
             return $res;
         }
 ?>

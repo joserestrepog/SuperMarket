@@ -11,7 +11,7 @@
                 alert("Producto no existe.");
             </script>
             JAVASCRIPT;
-            header ("refresh:0;url=../../Vista\Modulo_administrador\html\Inventario\ModuloInventarioBuscar.php"); 
+            header ("refresh:0;url=../../Vista/Modulo_colaborador/ModuloInventarioBuscasC.php"); 
         }else{
         
         $var1 = $result[0];
@@ -84,7 +84,7 @@
                   </p>
                 </li>
                 <li>      
-                  <a href="../../../SuperMarket/Vista/Modulo_administrador/html/Inventario/ModuloInventarioBuscar.php" class="btn btn-submit"> Volver a buscar </a>
+                  <a href="../../../SuperMarket/Vista/Modulo_colaborador/ModuloInventarioBuscasC.php" class="btn btn-submit"> Volver a buscar </a>
                 </li>
             </ul>
           </form>

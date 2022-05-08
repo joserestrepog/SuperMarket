@@ -10,7 +10,7 @@
             header ("refresh:0;url=../Vista/Modulo_administrador/html/ModuloAdministrador.html");
         }
         else if($result=="Colaborador"){
-            header ("refresh:0;url=../Vista/Modulo_colaborador/colaborador.html");
+            header ("refresh:0;url=../Vista/Modulo_colaborador/ModuloInventarioBuscasC.php");
         }
         else if($result=="NOROL"){
             echo <<<JAVASCRIPT
